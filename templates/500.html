@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}Не удалось выполнить действие — Mira
+Beauty{% endblock %} {% block content %}
+<section class="container error-page">
+  <span class="error-number">…</span>
+  <p class="eyebrow">НЕБОЛЬШАЯ ПАУЗА</p>
+  <h1>Что-то пошло<br /><em>не по плану.</em></h1>
+  <p>
+    Попробуйте вернуться на главную и повторить действие позже.<br />Если вы
+    отправляли заявку, уточните её сохранение перед повтором.
+  </p>
+  <a class="button" href="{{ url_for('home') }}">На главную →</a>
+</section>
+{% endblock %}

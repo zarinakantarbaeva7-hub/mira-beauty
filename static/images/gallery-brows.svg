@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 780" fill="none"><title>Иллюстрация результата: естественная форма бровей крупным планом</title><defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5ecdf"/><stop offset="1" stop-color="#e6cdbd"/></linearGradient>
+ <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a3ae91"/><stop offset="1" stop-color="#66765c"/></linearGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7bfa4"/><stop offset=".55" stop-color="#d8a283"/><stop offset="1" stop-color="#bb7e61"/></linearGradient>
+ <linearGradient id="light-skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0d1b9"/><stop offset="1" stop-color="#dca88c"/></linearGradient>
+ <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#743e2d"/><stop offset=".4" stop-color="#b9754c"/><stop offset=".75" stop-color="#dba16e"/><stop offset="1" stop-color="#82442d"/></linearGradient>
+ <linearGradient id="dark-hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d3028"/><stop offset=".5" stop-color="#575044"/><stop offset="1" stop-color="#282e28"/></linearGradient>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b09465"/><stop offset=".25" stop-color="#e2cfa5"/><stop offset=".6" stop-color="#ab8859"/><stop offset="1" stop-color="#e1c598"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8e7d7"/><stop offset=".55" stop-color="#b8c4ae"/><stop offset="1" stop-color="#e1e3d1"/></linearGradient>
+ <linearGradient id="blush" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9c4bb"/><stop offset="1" stop-color="#c6887e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fffdf5" stop-opacity=".9"/><stop offset="1" stop-color="#fffdf5" stop-opacity="0"/></radialGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/><feOffset in="blur" dx="0" dy="12" result="offset"/><feFlood flood-color="#534b3a" flood-opacity=".12" result="shade"/><feComposite in="shade" in2="offset" operator="in" result="softshadow"/><feMerge><feMergeNode in="softshadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="linen" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 1h8M1 0v8" stroke="#ffffff" stroke-opacity=".1" stroke-width=".6"/></pattern>
+ </defs><path fill="#e0c0a7" d="M0 0h720v780H0z"/>
+ <path d="M0 0h720v780H0z" fill="#d8b398"/>
+ <circle cx="370" cy="367" r="310" fill="url(#light-skin)"/>
+ <path d="M105 345q204-130 407 0-200 162-407 0Z" fill="#faf5e9"/>
+ <path d="M105 345q204-130 407 0" stroke="#76553d" stroke-width="8" stroke-linecap="round"/>
+ <path d="M130 314q183-101 357 9" stroke="#c5957b" stroke-width="12" stroke-linecap="round"/>
+ <ellipse cx="308" cy="348" rx="75" ry="83" fill="#8c9775"/>
+ <ellipse cx="310" cy="350" rx="51" ry="64" fill="#5b6d52"/>
+ <ellipse cx="310" cy="353" rx="27" ry="38" fill="#334336"/>
+ <path d="m257 329 22 5m-27 22 25-1m-18 27 21-11m58-43 23-11m-18 36 25-1m-28 24 22 12" stroke="#b6c19a" stroke-width="3"/>
+ <circle cx="334" cy="324" r="17" fill="#fffdf3"/>
+ <circle cx="287" cy="378" r="7" fill="#fffdf3" opacity=".7"/>
+ <path d="M108 212q183-121 414-32-196-37-414 32" fill="#73513b"/>
+ <path d="m121 206 23-18m-4 15 23-19m0 15 23-19m0 14 24-20m-2 16 25-19m-2 16 25-18m-1 16 25-18m1 16 25-17m1 16 24-16m2 16 23-15m3 15 23-14m3 15 22-13m3 15 22-11m4 14 21-10m4 13 20-8" stroke="#a27b5a" stroke-width="3" stroke-linecap="round"/>
+ <path d="m131 326-22-23m52 7-17-25m50 9-13-26m58 10-8-27m54 20-3-26m91 31 8-27m32 36 13-26m27 39 18-22m22 39 23-19" stroke="#76553d" stroke-width="4" stroke-linecap="round"/>
+ <path d="M521 350q27 92 3 182l45 20" stroke="#c18d70" stroke-width="5" stroke-linecap="round"/>
+ <path d="M154 498q143 53 287-5" stroke="#d39d83" stroke-width="4" opacity=".7"/>
+ <path d="M169 642q141 61 290 0" stroke="#f0d4bb" stroke-width="3"/>
+ </svg>

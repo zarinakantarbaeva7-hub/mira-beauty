@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" fill="none"><title>Условный иллюстрированный портрет мастера Амины</title><defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5ecdf"/><stop offset="1" stop-color="#e6cdbd"/></linearGradient>
+ <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a3ae91"/><stop offset="1" stop-color="#66765c"/></linearGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7bfa4"/><stop offset=".55" stop-color="#d8a283"/><stop offset="1" stop-color="#bb7e61"/></linearGradient>
+ <linearGradient id="light-skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0d1b9"/><stop offset="1" stop-color="#dca88c"/></linearGradient>
+ <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#743e2d"/><stop offset=".4" stop-color="#b9754c"/><stop offset=".75" stop-color="#dba16e"/><stop offset="1" stop-color="#82442d"/></linearGradient>
+ <linearGradient id="dark-hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d3028"/><stop offset=".5" stop-color="#575044"/><stop offset="1" stop-color="#282e28"/></linearGradient>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b09465"/><stop offset=".25" stop-color="#e2cfa5"/><stop offset=".6" stop-color="#ab8859"/><stop offset="1" stop-color="#e1c598"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8e7d7"/><stop offset=".55" stop-color="#b8c4ae"/><stop offset="1" stop-color="#e1e3d1"/></linearGradient>
+ <linearGradient id="blush" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9c4bb"/><stop offset="1" stop-color="#c6887e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fffdf5" stop-opacity=".9"/><stop offset="1" stop-color="#fffdf5" stop-opacity="0"/></radialGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/><feOffset in="blur" dx="0" dy="12" result="offset"/><feFlood flood-color="#534b3a" flood-opacity=".12" result="shade"/><feComposite in="shade" in2="offset" operator="in" result="softshadow"/><feMerge><feMergeNode in="softshadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="linen" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 1h8M1 0v8" stroke="#ffffff" stroke-opacity=".1" stroke-width=".6"/></pattern>
+ </defs><path fill="#eff0e4" d="M0 0h600v700H0z"/>
+ <path d="M77 700V285a223 223 0 0 1 446 0v415Z" fill="#e6d1bd"/>
+ <circle cx="300" cy="300" r="185" fill="#f4e6d6"/>
+ <path d="M111 700q10-161 111-191h158q101 30 111 191" fill="#465e4e"/>
+ <path d="M238 458v66q60 51 124 0v-66Z" fill="url(#skin)"/>
+ <path d="M190 342q-28-144 28-189 82-67 178-2 58 41 40 173l-29 168H190Z" fill="url(#dark-hair)"/>
+ <path d="M214 278q0-100 88-105 90 9 91 105l-13 130q-30 69-80 72-52-5-81-72Z" fill="url(#skin)"/>
+ <path d="M189 292q64-22 113-126-17 102-91 153M302 166q77 59 106 155" fill="url(#dark-hair)"/>
+ <path d="M235 322q22-14 41-1M328 321q22-14 41 1" stroke="#694735" stroke-width="6" stroke-linecap="round"/>
+ <path d="M238 346q18 14 35 0M331 346q18 14 35 0" stroke="#503b2e" stroke-width="4" stroke-linecap="round"/>
+ <path d="m300 344-8 39h16" stroke="#ad7356" stroke-width="4" stroke-linecap="round"/>
+ <path d="M270 410q30-14 60 0-30 30-60 0Z" fill="#a45c51"/><path d="M278 410h44" stroke="#f1c3ad" stroke-width="3"/>
+ <ellipse cx="245" cy="378" rx="21" ry="10" fill="#c88b75" opacity=".45"/><ellipse cx="356" cy="378" rx="21" ry="10" fill="#c88b75" opacity=".45"/>
+ <circle cx="213" cy="389" r="12" stroke="url(#metal)" stroke-width="5"/><circle cx="386" cy="389" r="12" stroke="url(#metal)" stroke-width="5"/>
+ <path d="m222 511 78 90-63 48-49-121M378 511l-78 90 63 48 49-121" fill="#6f836a"/>
+ <path d="M300 601v99" stroke="#a1af94" stroke-width="2"/>
+ <circle cx="319" cy="654" r="5" fill="#ceb78d"/>
+ <path d="M160 281q-11 90 15 164M426 271q22 112-12 202" stroke="#807462" stroke-width="4" opacity=".6"/>
+ </svg>

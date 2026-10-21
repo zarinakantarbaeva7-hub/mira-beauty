@@ -1,0 +1,63 @@
+{% macro service_card(service) %}
+<article
+  class="service-card"
+  data-category="{{ service.category }}"
+  data-name="{{ service.name }}"
+>
+  <a
+    class="service-image"
+    href="{{ url_for('booking_page', service=service.id) }}"
+    aria-label="Выбрать: {{ service.name }}"
+    ><img
+      src="{{ url_for('static', filename='images/' + service.image) }}"
+      alt="Иллюстрация услуги: {{ service.name }}"
+      width="560"
+      height="440"
+      loading="lazy"
+    /><span class="image-arrow" aria-hidden="true">→</span></a
+  >
+  <div class="service-content">
+    <div class="card-meta">
+      <span>{{ service.category }}</span><span>{{ service.time }}</span>
+    </div>
+    <h3>
+      <a href="{{ url_for('booking_page', service=service.id) }}"
+        >{{ service.name }}</a
+      >
+    </h3>
+    <p>{{ service.description }}</p>
+    <div class="card-bottom">
+      <strong>{{ '{:,}'.format(service.price).replace(',', ' ') }} ₸</strong
+      ><a
+        class="text-link"
+        href="{{ url_for('booking_page', service=service.id) }}"
+        >Записаться <span aria-hidden="true">→</span></a
+      >
+    </div>
+  </div>
+</article>
+{% endmacro %} {% macro master_card(master) %}
+<article class="master-card">
+  <div class="master-image">
+    <img
+      src="{{ url_for('static', filename='images/' + master.image) }}"
+      alt="Демонстрационная иллюстрация мастера {{ master.name }}"
+      width="500"
+      height="560"
+      loading="lazy"
+    /><span class="pill master-experience">{{ master.experience }}</span>
+  </div>
+  <div class="master-content">
+    <p class="eyebrow">{{ master.role }}</p>
+    <h3>{{ master.name }}</h3>
+    <p>{{ master.bio }}</p>
+    <div class="master-tags">
+      {% for sid in master.services %}<span>{{ service_by_id[sid].name }}</span
+      >{% endfor %}
+    </div>
+    <a class="text-link" href="{{ url_for('booking_page', master=master.id) }}"
+      >Записаться к мастеру <span aria-hidden="true">→</span></a
+    >
+  </div>
+</article>
+{% endmacro %}

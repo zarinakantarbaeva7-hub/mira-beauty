@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f9f6ef" />
+    <meta
+      name="description"
+      content="Mira Beauty — учебный сайт студии красоты. Услуги, мастера, портфолио и запись на свободное время."
+    />
+    <meta name="csrf-token" content="{{ csrf_token }}" />
+    <title>{% block title %}Mira Beauty — время для себя{% endblock %}</title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.svg') }}"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <div class="announcement">
+      Учебная студия красоты <span>·</span> Внимание к деталям. Время для себя.
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="logo"
+          href="{{ url_for('home') }}"
+          aria-label="Mira Beauty — главная"
+          >mira<span>beauty</span><i aria-hidden="true">*</i></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span>
+        </button>
+        <nav id="main-nav" class="main-nav" aria-label="Основная навигация">
+          <a
+            href="{{ url_for('services_page') }}"
+            {% if request.endpoint == 'services_page' %}aria-current="page"{% endif %}
+            >Услуги и цены</a
+          >
+          <a
+            href="{{ url_for('masters_page') }}"
+            {% if request.endpoint == 'masters_page' %}aria-current="page"{% endif %}
+            >Мастера</a
+          >
+          <a
+            href="{{ url_for('gallery_page') }}"
+            {% if request.endpoint == 'gallery_page' %}aria-current="page"{% endif %}
+            >Портфолио</a
+          >
+          <a
+            href="{{ url_for('about_page') }}"
+            {% if request.endpoint == 'about_page' %}aria-current="page"{% endif %}
+            >О студии</a
+          >
+          <a class="button button-small" href="{{ url_for('booking_page') }}"
+            >Записаться <span aria-hidden="true">→</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <div class="container flashes" aria-live="polite">
+      {% for category, message in messages %}
+      <p
+        class="notice {{ 'notice-error' if category == 'error' else 'notice-success' }}"
+      >
+        {{ message }}
+      </p>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+    <main id="main">{% block content %}{% endblock %}</main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="logo" href="{{ url_for('home') }}"
+            >mira<span>beauty</span><i aria-hidden="true">*</i></a
+          >
+          <p>Красота, в которой<br />вам комфортно быть собой.</p>
+        </div>
+        <div>
+          <p class="footer-title">Знакомство</p>
+          <a href="{{ url_for('services_page') }}">Услуги и цены</a
+          ><a href="{{ url_for('masters_page') }}">Команда мастеров</a
+          ><a href="{{ url_for('gallery_page') }}">Портфолио</a>
+        </div>
+        <div>
+          <p class="footer-title">Ваш визит</p>
+          <a href="{{ url_for('booking_page') }}">Онлайн-запись</a
+          ><a href="{{ url_for('about_page') }}">О проекте</a
+          ><a href="{{ url_for('privacy_page') }}">Обработка данных</a>
+        </div>
+        <div class="footer-note">
+          <span class="pill pill-outline">УЧЕБНЫЙ ПРОЕКТ · ПМ 6</span>
+          <p>
+            Демонстрация работы сайта.<br />Реальные услуги не оказываются.<br />Для
+            записи используйте вымышленные данные.
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© {{ current_year }} Mira Beauty</span
+        ><span>С заботой о вашем времени</span
+        ><a href="{{ url_for('login') }}">Для администратора →</a>
+      </div>
+    </footer>
+  </body>
+</html>

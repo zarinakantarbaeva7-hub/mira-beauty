@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" fill="none"><title>Иллюстрация ухода: крем, дозатор, капля и листья</title><defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5ecdf"/><stop offset="1" stop-color="#e6cdbd"/></linearGradient>
+ <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a3ae91"/><stop offset="1" stop-color="#66765c"/></linearGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7bfa4"/><stop offset=".55" stop-color="#d8a283"/><stop offset="1" stop-color="#bb7e61"/></linearGradient>
+ <linearGradient id="light-skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0d1b9"/><stop offset="1" stop-color="#dca88c"/></linearGradient>
+ <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#743e2d"/><stop offset=".4" stop-color="#b9754c"/><stop offset=".75" stop-color="#dba16e"/><stop offset="1" stop-color="#82442d"/></linearGradient>
+ <linearGradient id="dark-hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d3028"/><stop offset=".5" stop-color="#575044"/><stop offset="1" stop-color="#282e28"/></linearGradient>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b09465"/><stop offset=".25" stop-color="#e2cfa5"/><stop offset=".6" stop-color="#ab8859"/><stop offset="1" stop-color="#e1c598"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8e7d7"/><stop offset=".55" stop-color="#b8c4ae"/><stop offset="1" stop-color="#e1e3d1"/></linearGradient>
+ <linearGradient id="blush" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9c4bb"/><stop offset="1" stop-color="#c6887e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fffdf5" stop-opacity=".9"/><stop offset="1" stop-color="#fffdf5" stop-opacity="0"/></radialGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/><feOffset in="blur" dx="0" dy="12" result="offset"/><feFlood flood-color="#534b3a" flood-opacity=".12" result="shade"/><feComposite in="shade" in2="offset" operator="in" result="softshadow"/><feMerge><feMergeNode in="softshadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="linen" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 1h8M1 0v8" stroke="#ffffff" stroke-opacity=".1" stroke-width=".6"/></pattern>
+ </defs><path fill="#edf0e4" d="M0 0h720v520H0z"/>
+ <circle cx="349" cy="242" r="180" fill="#e0e7d9"/>
+ <ellipse cx="354" cy="423" rx="231" ry="25" fill="#52664c" opacity=".1"/>
+ <path d="M498 331q35-94 26-182M511 262q-47-39-53-91M519 218q53-31 61-78" stroke="#74826b" stroke-width="4"/>
+ <path d="M516 225q-44-47-27-94 48 20 27 94M524 216q59-11 68-70-51 8-68 70M504 284q-72-8-81-68 61-8 81 68M515 276q64 0 89-58-56-17-89 58" fill="#879b77"/>
+ <path d="M490 332h91l-11 77h-69Z" fill="#c5ab8b"/>
+ <g filter="url(#shadow)">
+ <rect x="181" y="282" width="151" height="119" rx="21" fill="#e8d4b9"/>
+ <ellipse cx="257" cy="286" rx="77" ry="24" fill="#9b9275"/>
+ <ellipse cx="257" cy="275" rx="77" ry="23" fill="#b9b39a"/>
+ <path d="M206 319h102v54H206Z" fill="#f9f3e8"/><path d="M227 338h61M239 352h37" stroke="#74826b" stroke-width="4"/>
+ <rect x="362" y="213" width="82" height="192" rx="24" fill="#9aa987"/>
+ <path d="M371 272h64v83h-64z" fill="#f4efdf"/>
+ <path d="M384 291h37M389 304h27M391 333h23" stroke="#74826b" stroke-width="3"/>
+ <rect x="380" y="171" width="46" height="48" rx="7" fill="#33473d"/>
+ <path d="M403 172v-31h37" stroke="#33473d" stroke-width="9" stroke-linecap="round"/>
+ </g>
+ <path d="M152 221q-34-40 0-91 35 51 0 91Z" fill="#a7b592"/>
+ <path d="M152 203v-54" stroke="#dce6cd" stroke-width="3"/>
+ <circle cx="208" cy="175" r="11" fill="#fff8e8"/><circle cx="238" cy="141" r="7" fill="#fff8e8"/>
+ </svg>

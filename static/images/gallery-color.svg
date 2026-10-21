@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 780" fill="none"><title>Иллюстрация результата: медное окрашивание и волны</title><defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5ecdf"/><stop offset="1" stop-color="#e6cdbd"/></linearGradient>
+ <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a3ae91"/><stop offset="1" stop-color="#66765c"/></linearGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7bfa4"/><stop offset=".55" stop-color="#d8a283"/><stop offset="1" stop-color="#bb7e61"/></linearGradient>
+ <linearGradient id="light-skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0d1b9"/><stop offset="1" stop-color="#dca88c"/></linearGradient>
+ <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#743e2d"/><stop offset=".4" stop-color="#b9754c"/><stop offset=".75" stop-color="#dba16e"/><stop offset="1" stop-color="#82442d"/></linearGradient>
+ <linearGradient id="dark-hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d3028"/><stop offset=".5" stop-color="#575044"/><stop offset="1" stop-color="#282e28"/></linearGradient>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b09465"/><stop offset=".25" stop-color="#e2cfa5"/><stop offset=".6" stop-color="#ab8859"/><stop offset="1" stop-color="#e1c598"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8e7d7"/><stop offset=".55" stop-color="#b8c4ae"/><stop offset="1" stop-color="#e1e3d1"/></linearGradient>
+ <linearGradient id="blush" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9c4bb"/><stop offset="1" stop-color="#c6887e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fffdf5" stop-opacity=".9"/><stop offset="1" stop-color="#fffdf5" stop-opacity="0"/></radialGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/><feOffset in="blur" dx="0" dy="12" result="offset"/><feFlood flood-color="#534b3a" flood-opacity=".12" result="shade"/><feComposite in="shade" in2="offset" operator="in" result="softshadow"/><feMerge><feMergeNode in="softshadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="linen" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 1h8M1 0v8" stroke="#ffffff" stroke-opacity=".1" stroke-width=".6"/></pattern>
+ </defs><path fill="#e8d9c4" d="M0 0h720v780H0z"/>
+ <circle cx="375" cy="321" r="272" fill="#efe2cd"/>
+ <path d="M138 780q21-166 152-201h140q126 36 150 201" fill="#6f8062"/>
+ <path d="M300 485v126q61 34 121-1V485" fill="url(#skin)"/>
+ <path d="M198 695q-35-140 3-211-69-69-32-146-24-64 17-123 19-112 161-114 143-1 183 109 43 56 19 124 42 79-25 149 49 100 3 212Z" fill="url(#copper)"/>
+ <path d="M263 283q20-84 96-85 84 9 101 84l-18 136q-27 72-83 75-59-5-83-78Z" fill="url(#skin)"/>
+ <path d="M244 329q54-40 117-161 41 101 109 142l15-83q-7-109-127-99-111 0-131 105Z" fill="url(#copper)"/>
+ <path d="M238 242q-75 98-11 173 41 49 5 110-38 70 5 135M272 229q-38 97-18 159 19 59-13 109-38 72 3 149M480 234q58 81 22 142-28 47 1 93 50 77 1 176M456 258q19 68 0 118-17 48 13 97 42 65 12 165" stroke="#edba83" stroke-width="9" stroke-linecap="round" opacity=".55"/>
+ <path d="M224 265q-25 70 13 124M242 536q-22 45 0 79M492 496q23 48 2 103" stroke="#633a2b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+ <path d="M290 334q24-14 44-1M385 333q25-14 45 0M294 357q17 13 35 0M390 356q17 13 35 0" stroke="#795038" stroke-width="4" stroke-linecap="round"/>
+ <path d="m361 358-6 36h14M334 432q26 14 53-1" stroke="#a46450" stroke-width="4" stroke-linecap="round"/>
+ <path d="M173 731q177 53 376 0" stroke="#a4b08e" stroke-width="3"/>
+ </svg>

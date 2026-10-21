@@ -1,0 +1,269 @@
+{% extends "base.html" %} {% block title %}Онлайн-запись — Mira Beauty{%
+endblock %} {% block content %}
+<section class="container page-intro booking-intro">
+  <div>
+    <p class="eyebrow">ПАУЗА, КОТОРАЯ ВАМ НУЖНА</p>
+    <h1>Ваш день.<br /><em>Ваше время.</em></h1>
+  </div>
+  <p>
+    Выберите процедуру, мастера и свободный час.<br />Остальное — пара простых
+    полей.
+  </p>
+</section>
+<section class="container booking-layout section-top-small">
+  <aside class="booking-aside">
+    <div class="booking-aside-title">
+      <span aria-hidden="true">*</span>
+      <h2>С заботой<br />о вашем времени</h2>
+    </div>
+    <ol class="booking-steps">
+      <li>
+        <span>01</span>
+        <div>
+          <b>Услуга и мастер</b>
+          <p>Покажем специалистов, которые выполняют выбранную процедуру.</p>
+        </div>
+      </li>
+      <li>
+        <span>02</span>
+        <div>
+          <b>Свободное время</b>
+          <p>Учитываем длительность процедуры и уже занятые часы.</p>
+        </div>
+      </li>
+      <li>
+        <span>03</span>
+        <div>
+          <b>Подтверждение</b>
+          <p>Сохраните номер заявки после успешной отправки.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="booking-demo-note">
+      <b>Это учебная запись</b>
+      <p>
+        Реальные услуги не оказываются. Используйте вымышленные имя и телефон.
+        Не вводите пароли или платёжные данные.
+      </p>
+    </div>
+  </aside>
+  <div>
+    <form
+      id="booking-form"
+      class="booking-form"
+      novalidate
+      data-initial-master="{{ selected_master }}"
+    >
+      <div class="form-heading">
+        <h2>Запись в студию</h2>
+        <span class="pill">ОНЛАЙН</span>
+      </div>
+      <fieldset>
+        <legend><span>01</span> Что выберем?</legend>
+        <div class="form-row">
+          <div class="field">
+            <label for="service">Услуга <span>*</span></label
+            ><select
+              id="service"
+              name="service"
+              required
+              aria-describedby="error-service"
+            >
+              <option value="">Выберите процедуру</option>
+              {% for service in services %}
+              <option
+                value="{{ service.id }}"
+                data-price="{{ service.price }}"
+                data-duration="{{ service.duration }}"
+                {% if selected_service == service.id %}selected{% endif %}
+              >
+                {{ service.name }} — {{
+                '{:,}'.format(service.price).replace(',', ' ') }} ₸
+              </option>
+              {% endfor %}</select
+            ><small
+              class="field-error"
+              id="error-service"
+              data-error="service"
+            ></small>
+          </div>
+          <div class="field">
+            <label for="master">Мастер <span>*</span></label
+            ><select
+              id="master"
+              name="master"
+              required
+              disabled
+              aria-describedby="error-master"
+            >
+              <option value="">Сначала выберите услугу</option></select
+            ><small
+              class="field-error"
+              id="error-master"
+              data-error="master"
+            ></small>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span>02</span> Когда вам удобно?</legend>
+        <div class="field date-field">
+          <label for="visit_date">Дата визита <span>*</span></label
+          ><input
+            id="visit_date"
+            name="visit_date"
+            type="date"
+            required
+            min="{{ today }}"
+            max="{{ last_day }}"
+            aria-describedby="error-visit_date"
+          /><small
+            class="field-error"
+            id="error-visit_date"
+            data-error="visit_date"
+          ></small>
+        </div>
+        <div class="field">
+          <span class="field-label" id="time-label"
+            >Свободное время <span>*</span></span
+          ><input type="hidden" name="visit_time" id="visit_time" />
+          <div
+            id="time-slots"
+            class="time-slots"
+            role="group"
+            aria-labelledby="time-label"
+          >
+            <p class="slots-hint">Выберите услугу, мастера и дату.</p>
+          </div>
+          <small
+            class="field-error"
+            id="error-visit_time"
+            data-error="visit_time"
+          ></small>
+          <p
+            id="availability-message"
+            class="field-hint"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span>03</span> Как к вам обращаться?</legend>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Имя <span>*</span></label
+            ><input
+              id="name"
+              name="name"
+              autocomplete="given-name"
+              required
+              minlength="2"
+              maxlength="60"
+              placeholder="Ваше имя"
+              aria-describedby="error-name"
+            /><small
+              class="field-error"
+              id="error-name"
+              data-error="name"
+            ></small>
+          </div>
+          <div class="field">
+            <label for="phone">Телефон <span>*</span></label
+            ><input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              required
+              maxlength="25"
+              placeholder="+7 (700) 123-45-67"
+              aria-describedby="error-phone"
+            /><small
+              class="field-error"
+              id="error-phone"
+              data-error="phone"
+            ></small>
+          </div>
+        </div>
+        <div class="field">
+          <label for="comment"
+            >Пожелания <span class="optional">необязательно</span></label
+          ><textarea
+            id="comment"
+            name="comment"
+            rows="3"
+            maxlength="500"
+            placeholder="Например: хочу сохранить длину волос"
+            aria-describedby="error-comment"
+          ></textarea
+          ><small
+            class="field-error"
+            id="error-comment"
+            data-error="comment"
+          ></small>
+        </div>
+      </fieldset>
+      <div id="booking-summary" class="booking-summary" hidden>
+        <span>Ваша процедура</span>
+        <div>
+          <strong id="summary-price"></strong
+          ><small id="summary-duration"></small>
+        </div>
+      </div>
+      <label class="consent"
+        ><input
+          type="checkbox"
+          name="consent"
+          required
+          aria-describedby="error-consent"
+        /><span
+          >Согласен на обработку имени, телефона и данных заявки для организации
+          записи.
+          <a href="{{ url_for('privacy_page') }}"
+            >Подробнее об обработке данных</a
+          ></span
+        ></label
+      ><small
+        class="field-error"
+        id="error-consent"
+        data-error="consent"
+      ></small
+      ><button
+        class="button button-full"
+        id="booking-submit"
+        type="submit"
+        disabled
+      >
+        Отправить заявку <span aria-hidden="true">→</span>
+      </button>
+      <p class="form-footnote">
+        Оплата не требуется. Заявка создаётся только после успешной отправки.
+      </p>
+      <div id="form-message" role="status" aria-live="polite"></div>
+    </form>
+    <section
+      id="booking-success"
+      class="booking-success"
+      tabindex="-1"
+      aria-labelledby="success-title"
+      hidden
+    >
+      <div class="success-symbol" aria-hidden="true">✓</div>
+      <p class="eyebrow">ВАШЕ ВРЕМЯ СОХРАНЕНО</p>
+      <h2 id="success-title">Заявка <em>принята.</em></h2>
+      <p>
+        Сохраните номер и детали записи. В учебном проекте уведомления по
+        телефону не отправляются.
+      </p>
+      <div class="success-reference">
+        <span>НОМЕР ЗАЯВКИ</span><strong id="success-id"></strong>
+      </div>
+      <dl id="success-details"></dl>
+      <button class="button button-outline" id="new-booking" type="button">
+        Создать ещё одну заявку →</button
+      ><a class="underlined-link" href="{{ url_for('home') }}">На главную</a>
+    </section>
+  </div>
+</section>
+{% endblock %}

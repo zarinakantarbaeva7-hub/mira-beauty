@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Mira Beauty: сайт",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/app.py",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Mira Beauty: Python-приложение оператора",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/operator_app.py",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

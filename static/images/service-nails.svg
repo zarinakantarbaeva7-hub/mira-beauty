@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" fill="none"><title>Иллюстрация маникюра: рука с покрытием и флакон лака</title><defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5ecdf"/><stop offset="1" stop-color="#e6cdbd"/></linearGradient>
+ <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a3ae91"/><stop offset="1" stop-color="#66765c"/></linearGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7bfa4"/><stop offset=".55" stop-color="#d8a283"/><stop offset="1" stop-color="#bb7e61"/></linearGradient>
+ <linearGradient id="light-skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0d1b9"/><stop offset="1" stop-color="#dca88c"/></linearGradient>
+ <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#743e2d"/><stop offset=".4" stop-color="#b9754c"/><stop offset=".75" stop-color="#dba16e"/><stop offset="1" stop-color="#82442d"/></linearGradient>
+ <linearGradient id="dark-hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d3028"/><stop offset=".5" stop-color="#575044"/><stop offset="1" stop-color="#282e28"/></linearGradient>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b09465"/><stop offset=".25" stop-color="#e2cfa5"/><stop offset=".6" stop-color="#ab8859"/><stop offset="1" stop-color="#e1c598"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8e7d7"/><stop offset=".55" stop-color="#b8c4ae"/><stop offset="1" stop-color="#e1e3d1"/></linearGradient>
+ <linearGradient id="blush" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9c4bb"/><stop offset="1" stop-color="#c6887e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fffdf5" stop-opacity=".9"/><stop offset="1" stop-color="#fffdf5" stop-opacity="0"/></radialGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/><feOffset in="blur" dx="0" dy="12" result="offset"/><feFlood flood-color="#534b3a" flood-opacity=".12" result="shade"/><feComposite in="shade" in2="offset" operator="in" result="softshadow"/><feMerge><feMergeNode in="softshadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="linen" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 1h8M1 0v8" stroke="#ffffff" stroke-opacity=".1" stroke-width=".6"/></pattern>
+ </defs><path fill="#edf0e4" d="M0 0h720v520H0z"/>
+ <path d="M0 357 720 83v437H0Z" fill="#e0e7d8"/>
+ <circle cx="523" cy="184" r="97" fill="#f7f5e9"/>
+ <ellipse cx="341" cy="417" rx="224" ry="26" fill="#65725d" opacity=".1"/>
+ <g transform="rotate(-17 296 290)">
+ <path d="M192 445v-93q-51-65-48-118 1-25 20-26 13-1 22 21l28 55V133q0-24 18-24t18 24v120-155q0-24 19-24t19 24v155-134q0-24 19-24t19 24v136-105q0-24 18-24t18 24v185q-2 58-41 88v66" fill="url(#light-skin)"/>
+ <path d="M216 137q14-14 28 0v28q-14 11-28 0ZM252 102q15-13 28 0v30q-14 11-28 0ZM291 124q14-13 28 0v28q-14 11-28 0ZM329 151q13-13 25 0v26q-13 10-25 0Z" fill="#b7766f"/>
+ <path d="M238 283q56-21 78 24M235 330q36 21 62 8" stroke="#c58e72" stroke-width="3" stroke-linecap="round"/>
+ <path d="M186 418h149v34H186Z" fill="#849778"/>
+ <path d="M190 430h140" stroke="#d2dbc4" stroke-width="3"/>
+ </g>
+ <g filter="url(#shadow)" transform="rotate(12 510 330)"><rect x="464" y="281" width="83" height="111" rx="17" fill="#bf8d82"/>
+ <rect x="474" y="215" width="62" height="71" rx="8" fill="#33473d"/>
+ <path d="M476 310h59v48h-59z" fill="#f5eadb"/>
+ <path d="M487 329h36M495 341h20" stroke="#a76950" stroke-width="3"/>
+ <path d="M475 294v81" stroke="#dcb2a5" stroke-width="5" stroke-linecap="round"/>
+ </g>
+ <path d="m537 114 29 28-29 28-29-28Z" stroke="#879877" stroke-width="2"/>
+ </svg>

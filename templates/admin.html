@@ -1,0 +1,162 @@
+{% extends "base.html" %} {% block title %}Управление записями — Mira Beauty{%
+endblock %} {% set labels = {'new':'Новая', 'confirmed':'Подтверждена',
+'completed':'Завершена', 'cancelled':'Отменена'} %} {% block content %}
+<section class="container admin-page">
+  <div class="admin-heading">
+    <div>
+      <p class="eyebrow">MIRA / РАБОЧЕЕ ПРОСТРАНСТВО</p>
+      <h1>Записи <em>студии.</em></h1>
+      <p>Заявки клиентов, расписание и статусы — в одном месте.</p>
+    </div>
+    <div class="admin-actions">
+      <a
+        class="button button-outline button-small"
+        href="{{ url_for('admin_export') }}"
+        >Экспорт CSV ↓</a
+      >
+      <form method="post" action="{{ url_for('logout') }}">
+        <input
+          type="hidden"
+          name="csrf_token"
+          value="{{ csrf_token }}"
+        /><button class="button button-small" type="submit">Выйти →</button>
+      </form>
+    </div>
+  </div>
+  <div class="stats-grid">
+    <article>
+      <span>Все записи</span><strong>{{ counts.total }}</strong>
+    </article>
+    <article><span>Новые</span><strong>{{ counts.new }}</strong></article>
+    <article>
+      <span>Подтверждены</span><strong>{{ counts.confirmed }}</strong>
+    </article>
+    <article>
+      <span>Завершены</span><strong>{{ counts.completed }}</strong>
+    </article>
+    <article>
+      <span>Отменены</span><strong>{{ counts.cancelled }}</strong>
+    </article>
+  </div>
+  <form class="admin-filter" method="get" action="{{ url_for('admin') }}">
+    <div class="field">
+      <label for="admin-search">Найти заявку</label
+      ><input
+        id="admin-search"
+        type="search"
+        name="q"
+        value="{{ query }}"
+        placeholder="Номер, имя или телефон"
+        maxlength="100"
+      />
+    </div>
+    <div class="field">
+      <label for="admin-status">Статус</label
+      ><select id="admin-status" name="status">
+        <option value="">Все статусы</option>
+        {% for value, label in labels.items() %}
+        <option
+          value="{{ value }}"
+          {% if status_filter == value %}selected{% endif %}
+        >
+          {{ label }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+    <button class="button button-small" type="submit">Применить →</button
+    ><a class="underlined-link" href="{{ url_for('admin') }}">Сбросить</a>
+  </form>
+  <div class="admin-results-heading">
+    <h2>Список заявок</h2>
+    <span>{{ bookings|length }} в текущей выборке</span>
+  </div>
+  {% if bookings %}
+  <div class="bookings-list">
+    {% for booking in bookings %}
+    <article class="booking-record">
+      <div class="record-top">
+        <div>
+          <span class="record-id">#{{ booking.id }}</span>
+          <h3>{{ booking.name }}</h3>
+          <a class="record-phone" href="tel:{{ booking.phone }}"
+            >{{ booking.phone }}</a
+          >
+        </div>
+        <span class="status-pill status-{{ booking.status }}"
+          >{{ labels.get(booking.status, booking.status) }}</span
+        >
+      </div>
+      <dl class="record-details">
+        <div>
+          <dt>Услуга</dt>
+          <dd>
+            {{ service_by_id[booking.service].name if booking.service in
+            service_by_id else booking.service }}
+          </dd>
+        </div>
+        <div>
+          <dt>Мастер</dt>
+          <dd>
+            {{ master_by_id[booking.master].name if booking.master in
+            master_by_id else booking.master or 'Не указан' }}
+          </dd>
+        </div>
+        <div>
+          <dt>Дата и время</dt>
+          <dd>
+            {{ booking.visit_date }} · {{ booking.visit_time or 'Не указано' }}
+          </dd>
+        </div>
+        <div>
+          <dt>Создана</dt>
+          <dd>{{ booking.created_at|salon_time }}</dd>
+        </div>
+      </dl>
+      {% if booking.comment %}
+      <p class="record-comment"><b>Пожелания:</b> {{ booking.comment }}</p>
+      {% endif %}
+      <form
+        class="status-form"
+        method="post"
+        action="{{ url_for('admin_status', booking_id=booking.id) }}"
+      >
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}" /><label
+          class="visually-hidden"
+          for="status-{{ booking.id }}"
+          >Статус заявки {{ booking.id }}</label
+        ><select id="status-{{ booking.id }}" name="status">
+          {% for value, label in labels.items() %}
+          <option
+            value="{{ value }}"
+            {% if booking.status == value %}selected{% endif %}
+          >
+            {{ label }}
+          </option>
+          {% endfor %}</select
+        ><button class="button button-small" type="submit">
+          Сохранить статус →
+        </button>
+      </form>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state">
+    <span aria-hidden="true">—</span>
+    <h3>Записей пока нет</h3>
+    <p>
+      Измените условия поиска или отправьте тестовую заявку через форму на
+      сайте.
+    </p>
+    <a class="button button-outline" href="{{ url_for('booking_page') }}"
+      >Создать тестовую запись →</a
+    >
+  </div>
+  {% endif %}
+  <p class="fine-print">
+    Данные заявок доступны только после входа. Изменение статуса может влиять на
+    занятость времени. Для демонстрации используйте вымышленные данные.
+  </p>
+</section>
+{% endblock %}

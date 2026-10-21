@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}{{ title }} — Mira Beauty{% endblock
+%} {% block content %}
+<section class="container error-page">
+  <span class="error-number">{{ code }}</span>
+  <p class="eyebrow">НЕБОЛЬШАЯ ПАУЗА</p>
+  <h1>{{ title }}</h1>
+  <p>{{ message }}</p>
+  <a class="button" href="{{ url_for('home') }}">На главную →</a>
+  <a class="underlined-link" href="{{ url_for('services_page') }}"
+    >Посмотреть услуги</a
+  >
+</section>
+{% endblock %}

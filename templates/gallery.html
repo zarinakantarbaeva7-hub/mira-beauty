@@ -1,0 +1,90 @@
+{% extends "base.html" %} {% block title %}Портфолио и вдохновение — Mira
+Beauty{% endblock %} {% block content %}
+<section class="container page-intro">
+  <div>
+    <p class="eyebrow">НАСТРОЕНИЕ В ДЕТАЛЯХ</p>
+    <h1>Идеи, которые<br /><em>хочется сохранить.</em></h1>
+  </div>
+  <p>
+    Формы, оттенки и маленькие акценты.<br />Демонстрационная коллекция образов
+    Mira.
+  </p>
+</section>
+<section class="container section section-top-small">
+  <div
+    class="filter-group gallery-filters"
+    role="group"
+    aria-label="Категории портфолио"
+  >
+    <button
+      class="filter-button active"
+      data-gallery-filter="all"
+      aria-pressed="true"
+    >
+      Все образы</button
+    >{% for category in gallery|map(attribute='category')|unique %}<button
+      class="filter-button"
+      data-gallery-filter="{{ category }}"
+      aria-pressed="false"
+    >
+      {{ category }}</button
+    >{% endfor %}
+  </div>
+  <div class="gallery-grid">
+    {% for item in gallery %}
+    <article class="gallery-item" data-category="{{ item.category }}">
+      <button
+        class="gallery-open"
+        type="button"
+        data-image="{{ url_for('static', filename='images/' + item.image) }}"
+        data-title="{{ item.title }}"
+        aria-label="Увеличить: {{ item.title }}"
+      >
+        <img
+          src="{{ url_for('static', filename='images/' + item.image) }}"
+          alt="{{ item.title }} — демонстрационная иллюстрация"
+          width="620"
+          height="620"
+          loading="lazy"
+        /><span class="gallery-zoom" aria-hidden="true">+</span>
+      </button>
+      <div class="gallery-caption">
+        <div>
+          <span class="eyebrow">{{ item.category }}</span>
+          <h3>{{ item.title }}</h3>
+        </div>
+        <span aria-hidden="true">→</span>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="fine-print">
+    Все изображения — демонстрационные иллюстрации учебного проекта. Они не
+    являются фотографиями выполненных работ или реальных клиентов.
+  </p>
+</section>
+<dialog
+  id="gallery-dialog"
+  class="gallery-dialog"
+  aria-labelledby="gallery-dialog-title"
+>
+  <button class="dialog-close" type="button" aria-label="Закрыть изображение">
+    ×</button
+  ><img
+    id="gallery-dialog-image"
+    src="{{ url_for('static', filename='images/' + gallery[0].image) }}"
+    alt=""
+    width="800"
+    height="800"
+  />
+  <h2 id="gallery-dialog-title"></h2>
+  <p>Демонстрационная иллюстрация</p>
+</dialog>
+<section class="container cta-panel">
+  <div>
+    <p class="eyebrow">ВДОХНОВИЛИСЬ?</p>
+    <h2>Найдём время<br /><em>для вашего образа.</em></h2>
+  </div>
+  <a class="button" href="{{ url_for('booking_page') }}">Перейти к записи →</a>
+</section>
+{% endblock %}

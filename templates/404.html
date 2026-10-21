@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}Страница не найдена — Mira Beauty{%
+endblock %} {% block content %}
+<section class="container error-page">
+  <span class="error-number">404</span>
+  <p class="eyebrow">КАЖЕТСЯ, МЫ РАЗМИНУЛИСЬ</p>
+  <h1>Этой страницы<br /><em>здесь нет.</em></h1>
+  <p>
+    Возможно, адрес изменился или в нём есть опечатка.<br />Вернёмся туда, где
+    всё начинается?
+  </p>
+  <a class="button" href="{{ url_for('home') }}">На главную →</a
+  ><a class="underlined-link" href="{{ url_for('services_page') }}"
+    >Посмотреть услуги</a
+  >
+</section>
+{% endblock %}

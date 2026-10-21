@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% from "_macros.html" import master_card with context
+%} {% block title %}Команда мастеров — Mira Beauty{% endblock %} {% block
+content %}
+<section class="container page-intro">
+  <div>
+    <p class="eyebrow">ЗНАКОМСТВО С КОМАНДОЙ</p>
+    <h1>Внимание к вам.<br /><em>Любовь к деталям.</em></h1>
+  </div>
+  <p>
+    У каждого — свой почерк и любимые процедуры.<br />Познакомьтесь с мастерами
+    перед записью.
+  </p>
+</section>
+<section class="container section section-top-small">
+  <div class="master-grid">
+    {% for master in masters %}{{ master_card(master) }}{% endfor %}
+  </div>
+  <p class="fine-print">
+    Имена, опыт и специализации — демонстрационные данные. Портреты являются
+    иллюстрациями, не фотографиями реальных сотрудников.
+  </p>
+</section>
+<section class="container philosophy compact">
+  <div class="philosophy-mark" aria-hidden="true">m.</div>
+  <div>
+    <p class="eyebrow">ВАШ КОМФОРТ — В ДЕТАЛЯХ</p>
+    <h2>Не знаете,<br /><em>с чего начать?</em></h2>
+    <p>
+      Сначала выберите услугу. В форме записи сайт покажет подходящих мастеров,
+      а затем доступное время для вашей процедуры.
+    </p>
+    <a class="text-link" href="{{ url_for('services_page') }}"
+      >Посмотреть услуги →</a
+    >
+  </div>
+</section>
+{% endblock %}

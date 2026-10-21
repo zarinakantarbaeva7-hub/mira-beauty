@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 780" fill="none"><title>Иллюстрация результата: два варианта нежного маникюра</title><defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5ecdf"/><stop offset="1" stop-color="#e6cdbd"/></linearGradient>
+ <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a3ae91"/><stop offset="1" stop-color="#66765c"/></linearGradient>
+ <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7bfa4"/><stop offset=".55" stop-color="#d8a283"/><stop offset="1" stop-color="#bb7e61"/></linearGradient>
+ <linearGradient id="light-skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0d1b9"/><stop offset="1" stop-color="#dca88c"/></linearGradient>
+ <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#743e2d"/><stop offset=".4" stop-color="#b9754c"/><stop offset=".75" stop-color="#dba16e"/><stop offset="1" stop-color="#82442d"/></linearGradient>
+ <linearGradient id="dark-hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d3028"/><stop offset=".5" stop-color="#575044"/><stop offset="1" stop-color="#282e28"/></linearGradient>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b09465"/><stop offset=".25" stop-color="#e2cfa5"/><stop offset=".6" stop-color="#ab8859"/><stop offset="1" stop-color="#e1c598"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8e7d7"/><stop offset=".55" stop-color="#b8c4ae"/><stop offset="1" stop-color="#e1e3d1"/></linearGradient>
+ <linearGradient id="blush" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9c4bb"/><stop offset="1" stop-color="#c6887e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fffdf5" stop-opacity=".9"/><stop offset="1" stop-color="#fffdf5" stop-opacity="0"/></radialGradient>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/><feOffset in="blur" dx="0" dy="12" result="offset"/><feFlood flood-color="#534b3a" flood-opacity=".12" result="shade"/><feComposite in="shade" in2="offset" operator="in" result="softshadow"/><feMerge><feMergeNode in="softshadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="linen" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 1h8M1 0v8" stroke="#ffffff" stroke-opacity=".1" stroke-width=".6"/></pattern>
+ </defs><path fill="#e7ebe0" d="M0 0h720v780H0z"/>
+ <path d="M0 0h720v780H0z" fill="#e4e9df"/>
+ <path d="m-70 269 694-355 169 331L99 600Z" fill="#f1eee3"/>
+ <ellipse cx="383" cy="661" rx="242" ry="35" fill="#7f8b75" opacity=".12"/>
+ <g transform="rotate(-14 303 449)">
+ <path d="M173 780V564q-57-46-65-117-2-27 15-32 16-4 27 16l39 63V275q0-25 21-25 20 0 20 25v153-211q0-25 21-25 22 0 22 25v211-197q0-25 21-25 20 0 20 25v199-157q0-25 21-25 20 0 20 25v266q-5 67-52 110v141" fill="url(#light-skin)"/>
+ <path d="M194 278q16-16 30 0v42q-15 12-30 0ZM235 221q17-16 32 0v45q-16 12-32 0ZM278 234q16-16 30 0v43q-15 12-30 0ZM320 278q15-15 29 0v42q-15 12-29 0Z" fill="#c18380"/>
+ <path d="M199 283h20M240 226h22M283 239h20M325 283h19" stroke="#eac0b7" stroke-width="3" stroke-linecap="round"/>
+ <path d="M240 397v24M237 405h7" stroke="url(#metal)" stroke-width="10"/>
+ <path d="M191 546q52-20 92 12M221 604q25 13 49 0" stroke="#c99173" stroke-width="3" stroke-linecap="round"/>
+ <path d="M166 732h156v48H166Z" fill="#6c8061"/>
+ <path d="M173 750h142" stroke="#a6b495" stroke-width="3"/>
+ </g>
+ <g transform="rotate(17 483 337)">
+ <path d="M405 780V455q-44-52-43-104 0-22 15-25 15-2 24 18l24 45V192q0-21 17-21 18 0 18 21v170-207q0-21 17-21 18 0 18 21v207-174q0-21 17-21 17 0 17 21v176-131q0-21 17-21t17 21v220q-1 53-42 93v229" fill="url(#skin)"/>
+ <path d="M430 195q13-13 24 0v36q-13 9-24 0ZM465 158q13-13 24 0v36q-13 9-24 0ZM500 192q12-12 23 0v35q-12 9-23 0ZM534 237q12-12 22 0v32q-12 9-22 0Z" fill="#ead0bc"/>
+ <path d="M468 332h22" stroke="url(#metal)" stroke-width="8"/>
+ <path d="M424 465q38-16 68 10" stroke="#b77d60" stroke-width="3"/>
+ <path d="M396 723h142v57H396Z" fill="#efe6d5"/>
+ </g>
+ <path d="M565 113v43M544 135h43" stroke="#a6b08f" stroke-width="3"/>
+ </svg>
