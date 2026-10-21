@@ -1,9 +1,9 @@
 # RepairLab — учебный проект ПМ 6
 
-Готовый сайт и Python-приложение находятся в папке [repairlab](./repairlab).
+Проект: [repairlab](./repairlab).
 
-[Инструкция запуска в VS Code](./repairlab/README.md) · [План защиты](./repairlab/docs/ЗАЩИТА.md) · [Проверки](./repairlab/docs/ПРОВЕРКИ.md)
+[Запуск в VS Code](./repairlab/README.md) · [План защиты](./repairlab/docs/ЗАЩИТА.md) · [Проверки и скриншоты](./repairlab/docs/ПРОВЕРКИ.md)
 
-Скачайте репозиторий через Code → Download ZIP, откройте папку repairlab в VS Code и выполните `python app.py`. Сайт: http://localhost:8000.
+Скачайте Code → Download ZIP, откройте папку repairlab в VS Code. В терминале: `python app.py`. Откройте http://localhost:8000. Приложение оператора: `python operator_app.py`.
 
-GitHub хранит исходники. Для работы Python-бэкенда по публичной ссылке требуется отдельный Python-хостинг; конфигурация Render включена в проект. Название репозитория mira-beauty сохранено, тема реализованного проекта — мастерская техники RepairLab.
+Исходники загружены на GitHub. Для публичного сайта с работающим Python-бэкендом необходим отдельный Python-хостинг; настройки Render включены. GitHub Pages не запускает Python и SQLite. Название репозитория mira-beauty сохранено; реализованная тема — мастерская техники RepairLab.

@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "RepairLab: сайт",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/app.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "RepairLab: оператор",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/operator_app.py",
+      "console": "integratedTerminal"
+    }
+  ]
+}
