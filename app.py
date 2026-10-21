@@ -500,12 +500,17 @@ if __name__ == '__main__':
             print(f'Не удалось создать администратора: {error}')
             sys.exit(1)
     else:
-        from waitress import serve
+        from waitress import create_server
         host = os.environ.get('MIRA_HOST', '127.0.0.1')
         port = int(os.environ.get('MIRA_PORT', '5000'))
         local_url = f'http://127.0.0.1:{port}'
+        try:
+            server = create_server(app, host=host, port=port, threads=4)
+        except OSError:
+            print(f'Не удалось открыть порт {port}. Остановите прежний сервер через Ctrl+C и запустите сайт снова.', flush=True)
+            sys.exit(1)
         print(f'Mira Beauty: {local_url}', flush=True)
         print('Остановка сервера: Ctrl+C', flush=True)
         if os.environ.get('MIRA_OPEN_BROWSER') == '1':
             threading.Timer(1.5, lambda: webbrowser.open(local_url)).start()
-        serve(app, host=host, port=port, threads=4)
+        server.run()
