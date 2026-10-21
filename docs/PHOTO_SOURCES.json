@@ -78,5 +78,20 @@
     "filename": "gallery-care.jpg",
     "page": "https://www.pexels.com/photo/portrait-photo-of-woman-wearing-facial-mask-4672629/",
     "url": "https://images.pexels.com/photos/4672629/pexels-photo-4672629.jpeg?cs=srgb&dl=pexels-ekaterina-bolovtsova-4672629.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "philosophy-spa.jpg",
+    "page": "https://www.pexels.com/photo/a-person-holding-a-bowl-of-cosmetic-product-6724517/",
+    "url": "https://images.pexels.com/photos/6724517/pexels-photo-6724517.jpeg?cs=srgb&dl=pexels-rdne-6724517.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "about-salon.jpg",
+    "page": "https://www.pexels.com/photo/beauty-salon-7750120/",
+    "url": "https://images.pexels.com/photos/7750120/pexels-photo-7750120.jpeg?cs=srgb&dl=pexels-artbovich-7750120.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "masters-at-work.jpg",
+    "page": "https://www.pexels.com/photo/a-woman-at-a-hairdresser-14615063/",
+    "url": "https://images.pexels.com/photos/14615063/pexels-photo-14615063.jpeg?cs=srgb&dl=pexels-konrads-photo-14615063.jpg&fm=jpg&w=1400&q=85"
   }
 ]

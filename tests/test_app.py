@@ -289,7 +289,7 @@ class MiraBeautyTests(unittest.TestCase):
         names = [row['image'] for row in services + masters + GALLERY]
         self.assertEqual(len(names), len(set(names)))
         image_hashes = []
-        for name in names + ['hero.jpg']:
+        for name in names + ['hero.jpg', 'philosophy-spa.jpg', 'about-salon.jpg', 'masters-at-work.jpg']:
             with self.subTest(image=name):
                 self.assertNotIn('://', name)
                 with self.client.get('/static/images/' + name) as response:

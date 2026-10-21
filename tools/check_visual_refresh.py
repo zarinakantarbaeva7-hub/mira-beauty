@@ -48,6 +48,13 @@ with tempfile.TemporaryDirectory() as temporary:
                     page.locator("img").evaluate_all("images=>Promise.all(images.map(i=>i.decode().catch(()=>null)))")
                     assert page.evaluate("Array.from(document.images).every(i=>i.complete&&i.naturalWidth>0)"), "image: " + path
                     assert page.evaluate("document.documentElement.scrollWidth<=innerWidth"), f"overflow {width} {path}"
+                    assert page.locator(".philosophy-mark, .about-symbol").count() == 0, "old placeholder: " + path
+                    assert page.locator('img[src$=".svg"]').count() == 0, "illustrated photo: " + path
+                    expected_photo = {"/": "philosophy-spa.jpg", "/about": "about-salon.jpg", "/masters": "masters-at-work.jpg"}.get(path)
+                    if expected_photo:
+                        photo = page.locator(f'img[src$="{expected_photo}"]')
+                        expect(photo).to_be_visible()
+                        assert photo.evaluate("(e)=>e.naturalWidth>=500 && e.getBoundingClientRect().height>=250"), expected_photo
                     assert page.evaluate("parseFloat(getComputedStyle(document.body).fontSize)>=17"), "small body font"
                     if path == "/services":
                         assert page.locator(".service-content p").first.evaluate("(e)=>parseFloat(getComputedStyle(e).fontSize)>=16")
@@ -55,12 +62,14 @@ with tempfile.TemporaryDirectory() as temporary:
                         assert page.locator("#phone").get_attribute("placeholder") == "+7 776 997 60 16"
                     assert page.locator('a[href="tel:+77769976016"]').count() >= 1
                 if width in (390, 1440):
-                    page.goto("http://127.0.0.1:5059/")
-                    page.locator("img").evaluate_all("images=>Promise.all(images.map(i=>i.decode().catch(()=>null)))")
-                    page.screenshot(path=str(OUTPUT / f"refresh-home-{width}.jpg"), type="jpeg", quality=85, full_page=True)
-                    page.goto("http://127.0.0.1:5059/services")
-                    page.locator("img").evaluate_all("images=>Promise.all(images.map(i=>i.decode().catch(()=>null)))")
-                    page.screenshot(path=str(OUTPUT / f"refresh-services-{width}.jpg"), type="jpeg", quality=85, full_page=True)
+                    for shot_path, shot_name in (("/", "home"), ("/services", "services"), ("/about", "about"), ("/masters", "masters")):
+                        page.goto("http://127.0.0.1:5059" + shot_path)
+                        page.locator("img").evaluate_all("images=>Promise.all(images.map(i=>i.decode().catch(()=>null)))")
+                        page.screenshot(path=str(OUTPUT / f"refresh-{shot_name}-{width}.jpg"), type="jpeg", quality=85, full_page=True)
+                    for shot_path, selector, shot_name in (("/", ".philosophy", "philosophy"), ("/about", ".about-feature", "salon"), ("/masters", ".philosophy", "team-work")):
+                        page.goto("http://127.0.0.1:5059" + shot_path)
+                        page.locator("img").evaluate_all("images=>Promise.all(images.map(i=>i.decode().catch(()=>null)))")
+                        page.locator(selector).screenshot(path=str(OUTPUT / f"refresh-{shot_name}-{width}.jpg"), type="jpeg", quality=85)
                 if width == 390:
                     page.goto("http://127.0.0.1:5059/")
                     page.locator(".menu-toggle").click()
@@ -74,9 +83,9 @@ with tempfile.TemporaryDirectory() as temporary:
         server.wait(timeout=10)
 (ROOT / "docs" / "PHOTO_CHECK.md").write_text(
     "# Проверка обновления фотографий и текста\n\n"
-    "В GitHub Actions выполнены 23 автоматических теста Flask, проверка 16 разных локальных JPEG "
+    f"В GitHub Actions выполнены 23 автоматических теста Flask, проверка {len(photos)} разных локальных JPEG "
     "и Chromium на ширинах 360, 390, 768, 1000 и 1440 пикселей. "
-    "Проверены загрузка всех фотографий, отсутствие горизонтального переполнения, "
+    "Проверены загрузка всех фотографий, отсутствие прежних заглушек m. и SVG-иллюстраций в фотографиях, отсутствие горизонтального переполнения, "
     "размер основного шрифта от 17px, описание услуг от 16px, контактный телефон и мобильное меню. "
     "Ошибок JavaScript в проверенных сценариях не обнаружено. "
     "Публичное размещение Flask-сервера этим не подтверждается.\n", encoding="utf-8")

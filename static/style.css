@@ -506,16 +506,13 @@ p {
   padding: 52px 65px;
   gap: 60px;
 }
-.philosophy-mark {
-  display: grid;
-  place-items: center;
-  font: italic 205px/0.9 var(--serif);
-  color: #758366;
-  min-height: 260px;
-  border: 1px solid #ced6c1;
-  border-radius: 160px 160px 4px 4px;
-  letter-spacing: -15px;
-  padding-right: 20px;
+.philosophy-photo {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 160px 160px 8px 8px;
 }
 .philosophy h2 {
   font-size: 38px;
@@ -1536,16 +1533,13 @@ textarea {
   padding-block: 50px 20px;
   align-items: center;
 }
-.about-symbol {
-  display: grid;
-  place-items: center;
-  height: 360px;
-  border-radius: 190px 190px 7px 7px;
-  background: #e8dfd1;
-  color: #a97c64;
-  font: italic 210px var(--serif);
-  letter-spacing: -20px;
-  padding-right: 20px;
+.about-photo {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 190px 190px 8px 8px;
 }
 .about-feature h2 {
   margin-bottom: 25px;
@@ -1820,9 +1814,8 @@ textarea {
     padding: 36px;
     gap: 35px;
   }
-  .philosophy-mark {
-    font-size: 150px;
-    min-height: 230px;
+  .philosophy-photo {
+    height: 300px;
   }
   .philosophy h2 {
     font-size: 32px;
@@ -1918,9 +1911,8 @@ textarea {
   .about-feature {
     gap: 40px;
   }
-  .about-symbol {
-    height: 300px;
-    font-size: 165px;
+  .about-photo {
+    height: 340px;
   }
   .educational-panel {
     gap: 20px 30px;
@@ -2079,12 +2071,10 @@ textarea {
     padding: 28px;
     gap: 30px;
   }
-  .philosophy-mark {
-    font-size: 130px;
-    min-height: 180px;
-    border-radius: 110px 110px 4px 4px;
-    max-width: 240px;
-    width: 100%;
+  .philosophy-photo {
+    height: 280px;
+    border-radius: 140px 140px 8px 8px;
+    max-width: 360px;
     margin: auto;
   }
   .philosophy h2 {
@@ -2398,11 +2388,9 @@ textarea {
     gap: 30px;
     padding-top: 30px;
   }
-  .about-symbol {
-    height: 250px;
-    font-size: 170px;
-    max-width: 300px;
-    width: 100%;
+  .about-photo {
+    height: 320px;
+    max-width: 360px;
     margin: auto;
   }
   .values-grid {

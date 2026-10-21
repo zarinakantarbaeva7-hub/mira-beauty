@@ -1,7 +1,7 @@
 name: Verify photos and typography
 on:
   push:
-    branches: [visual-refresh]
+    branches: [complete-photo-refresh]
 permissions:
   contents: write
 jobs:
@@ -30,4 +30,4 @@ jobs:
           git add static/images/*.jpg docs/screenshots/refresh-*.jpg docs/PHOTO_CHECK.md
           git diff --cached --quiet && exit 0
           git commit -m "Save verified salon photographs and visual checks [skip ci]"
-          git push origin HEAD:visual-refresh
+          git push origin HEAD:complete-photo-refresh
