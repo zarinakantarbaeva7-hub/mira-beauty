@@ -5,7 +5,9 @@ pushd "%~dp0"
 if errorlevel 1 goto folder_error
 
 echo.
+if not defined MIRA_PORT set "MIRA_PORT=5019"
 echo Mira Beauty - подготовка и запуск
+echo Адрес сайта: http://127.0.0.1:%MIRA_PORT%
 
 echo.
 if exist ".venv\Scripts\python.exe" goto environment_ready
