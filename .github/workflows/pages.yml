@@ -1,0 +1,50 @@
+name: Publish GitHub Pages
+on:
+  push:
+    branches: [main, pages-preview-ready]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install -r requirements.txt playwright
+          python -m playwright install --with-deps chromium
+      - name: Export public static pages
+        env:
+          PAGES_BASE_PATH: /mira-beauty
+        run: python tools/export_pages.py
+      - name: Check public pages
+        env:
+          PAGES_BASE_PATH: /mira-beauty
+        run: python tools/check_pages.py
+      - name: Verify original backend
+        run: python -m unittest discover -s tests -v
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

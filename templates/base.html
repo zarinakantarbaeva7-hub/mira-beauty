@@ -24,7 +24,7 @@
   <body>
     <a class="skip-link" href="#main">К содержимому</a>
     <div class="announcement">
-      Учебная студия красоты <span>·</span> Внимание к деталям. Время для себя.
+      {% if pages_preview %}Учебный проект <span>·</span> Просмотр сайта. Онлайн-запись отключена.{% else %}Учебная студия красоты <span>·</span> Внимание к деталям. Время для себя.{% endif %}
     </div>
     <header class="site-header">
       <div class="container header-inner">
@@ -115,7 +115,7 @@
       <div class="container footer-bottom">
         <span>© {{ current_year }} Mira Beauty</span
         ><span>С заботой о вашем времени</span
-        ><a href="{{ url_for('login') }}">Для администратора →</a>
+        >{% if not pages_preview %}<a href="{{ url_for('login') }}">Для администратора →</a>{% endif %}
       </div>
     </footer>
   </body>

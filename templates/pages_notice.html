@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }} — Mira Beauty{% endblock %}
+{% block content %}
+<section class="container page-intro">
+  <div><p class="eyebrow">УЧЕБНЫЙ ПРОЕКТ</p><h1>{{ heading }}</h1></div>
+  <p>{{ message }}</p>
+</section>
+<section class="container section section-top-small">
+  <p class="lead">На сайте можно посмотреть услуги, цены, команду и портфолио. Реальные услуги не оказываются.</p>
+  <p class="contact-band"><a href="tel:+77769976016">+7 776 997 60 16</a></p>
+  <a class="button" href="{{ url_for('services_page') }}">Посмотреть услуги →</a>
+</section>
+{% endblock %}
