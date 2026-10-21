@@ -26,8 +26,8 @@ master_card with context %} {% block content %}
   <div class="hero-visual">
     <div class="hero-image">
       <img
-        src="{{ url_for('static', filename='images/hero.svg') }}"
-        alt="Иллюстрация спокойного пространства студии красоты"
+        src="{{ url_for('static', filename='images/hero.jpg') }}"
+        alt="Интерьер светлого салона красоты"
         width="620"
         height="650"
         fetchpriority="high"
@@ -151,7 +151,7 @@ master_card with context %} {% block content %}
       class="gallery-preview-card"
       ><img
         src="{{ url_for('static', filename='images/' + item.image) }}"
-        alt="{{ item.title }} — демонстрационная иллюстрация"
+        alt="{{ item.title }} — фотография из фотобанка"
         width="560"
         height="560"
         loading="lazy"
@@ -159,7 +159,7 @@ master_card with context %} {% block content %}
     >{% endfor %}
   </div>
   <p class="fine-print">
-    В портфолио представлены демонстрационные иллюстрации, а не фотографии
+    В портфолио представлены демонстрационные фотографии из фотобанка, а не фотографии
     реальных клиентов.
   </p>
 </section>

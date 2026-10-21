@@ -10,7 +10,7 @@
     aria-label="Выбрать: {{ service.name }}"
     ><img
       src="{{ url_for('static', filename='images/' + service.image) }}"
-      alt="Иллюстрация услуги: {{ service.name }}"
+      alt="Процедура: {{ service.name }}"
       width="560"
       height="440"
       loading="lazy"
@@ -41,7 +41,7 @@
   <div class="master-image">
     <img
       src="{{ url_for('static', filename='images/' + master.image) }}"
-      alt="Демонстрационная иллюстрация мастера {{ master.name }}"
+      alt="Специалист салона — фотография из фотобанка"
       width="500"
       height="560"
       loading="lazy"

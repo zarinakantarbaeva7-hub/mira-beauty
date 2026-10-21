@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "hero.jpg",
+    "page": "https://www.pexels.com/photo/beauty-salon-interior-design-7750099/",
+    "url": "https://images.pexels.com/photos/7750099/pexels-photo-7750099.jpeg?cs=srgb&dl=pexels-artbovich-7750099.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "service-hair.jpg",
+    "page": "https://www.pexels.com/photo/a-blonde-haired-woman-having-a-haircut-6502174/",
+    "url": "https://images.pexels.com/photos/6502174/pexels-photo-6502174.jpeg?cs=srgb&dl=pexels-nadezhda-moryak-6502174.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "service-color.jpg",
+    "page": "https://www.pexels.com/photo/a-woman-having-her-hair-dyed-8468038/",
+    "url": "https://images.pexels.com/photos/8468038/pexels-photo-8468038.jpeg?cs=srgb&dl=pexels-n-voitkevich-8468038.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "service-nails.jpg",
+    "page": "https://www.pexels.com/photo/closeup-of-a-beautician-polishing-nails-18112337/",
+    "url": "https://images.pexels.com/photos/18112337/pexels-photo-18112337.jpeg?cs=srgb&dl=pexels-maxi-leiva-288925580-18112337.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "service-makeup.jpg",
+    "page": "https://www.pexels.com/photo/a-woman-with-brown-hair-getting-her-makeup-done-7035185/",
+    "url": "https://images.pexels.com/photos/7035185/pexels-photo-7035185.jpeg?cs=srgb&dl=pexels-rdne-7035185.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "service-brows.jpg",
+    "page": "https://www.pexels.com/photo/a-woman-having-her-eyebrow-colored-7035512/",
+    "url": "https://images.pexels.com/photos/7035512/pexels-photo-7035512.jpeg?cs=srgb&dl=pexels-rdne-7035512.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "service-care.jpg",
+    "page": "https://www.pexels.com/photo/female-applying-mask-on-face-in-spa-5240809/",
+    "url": "https://images.pexels.com/photos/5240809/pexels-photo-5240809.jpeg?cs=srgb&dl=pexels-anete-lusina-5240809.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "master-amina.jpg",
+    "page": "https://www.pexels.com/photo/lifestyle-portrait-of-a-woman-at-hair-salon-33867544/",
+    "url": "https://images.pexels.com/photos/33867544/pexels-photo-33867544.jpeg?cs=srgb&dl=pexels-prolificpeople-33867544.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "master-dana.jpg",
+    "page": "https://www.pexels.com/photo/smiling-manicurist-and-holding-electric-drill-18090215/",
+    "url": "https://images.pexels.com/photos/18090215/pexels-photo-18090215.jpeg?cs=srgb&dl=pexels-maria-isadora-485476797-18090215.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "master-sofia.jpg",
+    "page": "https://www.pexels.com/photo/woman-standing-with-bag-of-makeup-brushes-26616192/",
+    "url": "https://images.pexels.com/photos/26616192/pexels-photo-26616192.jpeg?cs=srgb&dl=pexels-deyvidpinedo-_fotografia-80608504-26616192.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "gallery-bob.jpg",
+    "page": "https://www.pexels.com/photo/close-up-of-woman-getting-her-hair-cut-10593034/",
+    "url": "https://images.pexels.com/photos/10593034/pexels-photo-10593034.jpeg?cs=srgb&dl=pexels-krzysztof-chrostowski-287001-10593034.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "gallery-color.jpg",
+    "page": "https://www.pexels.com/photo/woman-at-the-salon-3993312/",
+    "url": "https://images.pexels.com/photos/3993312/pexels-photo-3993312.jpeg?cs=srgb&dl=pexels-cottonbro-3993312.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "gallery-nails.jpg",
+    "page": "https://www.pexels.com/photo/hands-with-manicured-nails-9775261/",
+    "url": "https://images.pexels.com/photos/9775261/pexels-photo-9775261.jpeg?cs=srgb&dl=pexels-shvets-production-9775261.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "gallery-makeup.jpg",
+    "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-doing-make-up-9743963/",
+    "url": "https://images.pexels.com/photos/9743963/pexels-photo-9743963.jpeg?cs=srgb&dl=pexels-reneterp-9743963.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "gallery-brows.jpg",
+    "page": "https://www.pexels.com/photo/professional-makeup-artist-applying-eyebrow-makeup-33580450/",
+    "url": "https://images.pexels.com/photos/33580450/pexels-photo-33580450.jpeg?cs=srgb&dl=pexels-bulat843-1243575272-33580450.jpg&fm=jpg&w=1400&q=85"
+  },
+  {
+    "filename": "gallery-care.jpg",
+    "page": "https://www.pexels.com/photo/portrait-photo-of-woman-wearing-facial-mask-4672629/",
+    "url": "https://images.pexels.com/photos/4672629/pexels-photo-4672629.jpeg?cs=srgb&dl=pexels-ekaterina-bolovtsova-4672629.jpg&fm=jpg&w=1400&q=85"
+  }
+]

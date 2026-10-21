@@ -42,7 +42,7 @@ Beauty{% endblock %} {% block content %}
       >
         <img
           src="{{ url_for('static', filename='images/' + item.image) }}"
-          alt="{{ item.title }} — демонстрационная иллюстрация"
+          alt="{{ item.title }} — фотография из фотобанка"
           width="620"
           height="620"
           loading="lazy"
@@ -59,8 +59,7 @@ Beauty{% endblock %} {% block content %}
     {% endfor %}
   </div>
   <p class="fine-print">
-    Все изображения — демонстрационные иллюстрации учебного проекта. Они не
-    являются фотографиями выполненных работ или реальных клиентов.
+    Фотографии из фотобанка показывают примеры процедур и образов. Это учебная подборка, а не работы реального салона Mira Beauty.
   </p>
 </section>
 <dialog
@@ -78,7 +77,7 @@ Beauty{% endblock %} {% block content %}
     height="800"
   />
   <h2 id="gallery-dialog-title"></h2>
-  <p>Демонстрационная иллюстрация</p>
+  <p>Фотография из фотобанка</p>
 </dialog>
 <section class="container cta-panel">
   <div>

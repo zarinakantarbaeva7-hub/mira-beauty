@@ -283,20 +283,20 @@ class MiraBeautyTests(unittest.TestCase):
             create_admin('operator', 'AnotherPassword123!', self.database)
         self.assertEqual(self.sql('SELECT count(*) AS n FROM admins')[0]['n'], 1)
 
-    def test_all_illustrations_are_local_available_and_distinct(self):
+    def test_all_photos_are_local_available_and_distinct(self):
         services = self.client.get('/api/services').get_json()
         masters = self.client.get('/api/masters').get_json()
         names = [row['image'] for row in services + masters + GALLERY]
         self.assertEqual(len(names), len(set(names)))
         image_hashes = []
-        for name in names + ['hero.svg']:
+        for name in names + ['hero.jpg']:
             with self.subTest(image=name):
                 self.assertNotIn('://', name)
                 with self.client.get('/static/images/' + name) as response:
                     self.assertEqual(response.status_code, 200)
-                    self.assertEqual(response.mimetype, 'image/svg+xml')
-                    tree = ElementTree.fromstring(response.data)
-                    self.assertTrue(tree.tag.endswith('svg'))
+                    self.assertEqual(response.mimetype, 'image/jpeg')
+                    self.assertTrue(response.data.startswith(b'\xff\xd8\xff'))
+                    self.assertGreater(len(response.data), 2000)
                     image_hashes.append(hashlib.sha256(response.data).hexdigest())
         self.assertEqual(len(image_hashes), len(set(image_hashes)))
 
