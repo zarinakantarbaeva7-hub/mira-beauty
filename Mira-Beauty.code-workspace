@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "Mira Beauty",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "files.exclude": {
+      "**/__pycache__": true,
+      ".venv": true
+    },
+    "explorer.compactFolders": false
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.debugpy"
+    ]
+  }
+}

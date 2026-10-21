@@ -8,7 +8,11 @@
       "program": "${workspaceFolder}/app.py",
       "python": "${workspaceFolder}/.venv/Scripts/python.exe",
       "console": "integratedTerminal",
-      "justMyCode": true
+      "justMyCode": true,
+      "env": {
+        "MIRA_PORT": "5019",
+        "MIRA_OPEN_BROWSER": "1"
+      }
     },
     {
       "name": "Mira Beauty: Python-приложение оператора",
